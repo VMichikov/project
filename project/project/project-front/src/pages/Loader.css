@@ -1,0 +1,71 @@
+.loader {
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  margin-left: auto;
+  padding: 0;
+  margin-right: auto;
+}
+#loader-div {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  border: solid 1px;
+}
+.loader li {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: rgb(124, 114, 110);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+.loader li:nth-child(1) {
+  animation: transform1 1s infinite;
+}
+.loader li:nth-child(2) {
+  margin-left: -34px;
+  animation: transform2 1s infinite;
+}
+.loader li:nth-child(3) {
+  animation: transform2 1s infinite;
+  z-index: 1;
+}
+.loader li:nth-child(4) {
+  animation: transform3 1s infinite;
+}
+@keyframes transform1 {
+  from {
+    background: rgb(124, 114, 110);
+    transform: scale(0, 0);
+  }
+  to {
+    background: rgb(199, 72, 21);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.2, 1.2);
+  }
+}
+@keyframes transform2 {
+  from {
+    background: rgb(124, 114, 110);
+  }
+  to {
+    background: rgb(199, 72, 21);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: translate(34px, 0px) scale(1.2, 1.2);
+  }
+}
+@keyframes transform3 {
+  from {
+    background: rgb(124, 114, 110);
+    transform: scale(1.2, 1.2);
+  }
+  to {
+    background: rgb(199, 72, 21);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: scale(0, 0);
+  }
+}

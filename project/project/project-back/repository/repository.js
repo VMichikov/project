@@ -1,0 +1,17 @@
+const messagesRepository = require("./messagesRepository");
+const usersRepository = require("./usersRepository");
+const notificationsRepository = require("./notificationsRepository");
+const friendsListRepository = require("./friendsListRepository");
+const userOptionsRepository = require("./userOptionsRepository");
+let repository = {};
+let messages = new messagesRepository();
+let users = new usersRepository();
+let notifications = new notificationsRepository();
+let friendsList = new friendsListRepository();
+let userOptions = new userOptionsRepository();
+repository.messages = messages;
+repository.users = users;
+repository.notifications = notifications;
+repository.friendsList = friendsList;
+repository.userOptions = userOptions;
+exports.repository = repository;
